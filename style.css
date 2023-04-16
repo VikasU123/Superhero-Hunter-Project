@@ -1,0 +1,312 @@
+/* ....Navigation Bar....... */
+header {
+    width: 100%;
+    height: 4rem;
+    backdrop-filter: blur(5px);
+    position: sticky;
+    z-index: 10;
+    justify-content: space-between;
+    top: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    align-items: center;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+/* Title */
+#title h1 {
+    font-size: 2.5rem;
+    color: rgb(236, 78, 78);
+    font-weight: 580;
+    font-family: cursive;
+}
+
+#title h1 span {
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    font-family: monospace;
+}
+
+.nav-r {
+    display: flex;
+}
+
+.nav-r a {
+    color: lightgrey;
+}
+
+.nav-r a:hover {
+    display: flex;
+    color: white;
+}
+
+.nav-r div {
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-l {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ------------------------------------------------------------------------ */
+
+/* Background */
+body {
+    background: url(background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+}
+
+main{
+    margin: 0;
+}
+/* ---------------------------------------- */
+
+/* Search Bar Stylings */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+.search-container {
+    position: absolute;
+    margin: auto;
+    top: 15%;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    width: 300px;
+    height: 100px;
+}
+
+.search-container .do-search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: crimson;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.search-container .do-search:hover {
+    cursor: pointer;
+}
+
+.search-container .do-search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.search-container .do-search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+
+.search-container input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    text-shadow: 0 0 10px crimson;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.search-container input:hover {
+    cursor: pointer;
+}
+
+.search-container input:focus {
+    width: 300px;
+    opacity: 1;
+    cursor: text;
+}
+/* Search bar anumations */
+.search-container input:focus~.do-search {
+    right: -450px;
+    background: #151515;
+    z-index: 6;
+}
+
+.search-container input:focus~.do-search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+
+.search-container input:focus~.do-search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+}
+
+.search-container input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+/* --------------------------------------------------------- */
+
+/* Superhero list styling */
+/* image */
+.img-info img {
+    height: 100%;
+    margin: 0;
+} 
+
+.result-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#search-results {
+    top: 30%;
+    width: 60%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    margin: 0;
+}
+
+.single-search-result {
+    width: 100%;
+    height: 120px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.8rem;
+    border-bottom: 2px solid gray;
+    overflow: hidden;
+
+}
+/* Superhero information */
+.character-info {
+    text-decoration: none;
+     color: white;
+}
+
+.single-search-result .hero-info {
+    text-decoration: none;
+    
+    
+}
+/* Superhero name styling */
+.hero-name {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-family: cursive;
+}
+/* fav button */
+.buttons {
+    margin-right: 2.5rem;
+}
+
+.btn{
+    padding: 0.2rem;
+    background: #dc143c;
+    border: 0;
+    border-radius: 1rem;
+}
+
+.fav-toast,
+.remove-toast {
+    position: absolute;
+    bottom: 100px;
+    font-size: 24px;
+    width: 350px;
+    color: white;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    z-index: 2;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.fav-toast[data-visiblity="show"],
+.remove-toast[data-visiblity="show"] {
+    display: block;
+}
+
+.fav-toast[data-visiblity="hide"],
+.remove-toast[data-visiblity="hide"] {
+    display: none;
+}
+
+.fav-toast {
+    background-color: #20B130;
+    box-shadow: 0px 0px 3px 3px white;
+}
+
+.remove-toast {
+    background-color: hsl(40, 100%, 61%);
+    box-shadow: 0px 0px 3px 3px white;
+} 

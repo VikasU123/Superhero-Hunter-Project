@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Hunter</title>
+    <link rel="icon" href="icon.png" type="gif">
+    <!-- css file link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="snackbar"></div>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <a href="#">
+            <div class="nav-l">
+                <div id="title">
+                    <!-- Title -->
+                    <h1>Superhero<span>Hunter</span></h1>
+                </div>
+            </div>
+        </a>
+        <!-- Favourait and Home buttons in nav -->
+        <div class="nav-r">
+            <a href="index.html">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </a>
+            <a href="favourite.html">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- This is the body which contain search bar and the list -->
+    <main>
+        <!-- Search Bar -->
+        <div id="search-box" class="input flex-col searchBar-items">
+            <div class="search-container search-bar-container flex-row" id="search-form">
+                <input type="text" id="inputName" name="superheroName" placeholder="Search...">
+                <div class="do-search"></div>
+            </div>
+      </div>
+      <!-- The list of super heros -->
+      <div class="result-container">
+        <ul class="flex-col" id="search-results">
+            <!-- Structure of the data that is added using DOM manipulation -->
+
+            <!-- <li class="flex-row single-search-result">
+                 <div class="flex-row img-info">
+                      <img src="${hero.thumbnail.path+'/portrait_medium.' + hero.thumbnail.extension}" alt="">
+                 </div>
+
+                 <div class="hero-info">
+                      <a class="character-info" href="./more-info.html">
+                          <span class="hero-name">${hero.name}</span>
+                      </a>
+                 </div>
+
+                 <div class="flex-col buttons">
+                      <button class="btn add-to-fav-btn">${favouritesCharacterIDs.has(`${hero.id}`) ? "<i class=\"fa-solid fa-heart-circle-minus\"></i> &nbsp; Remove from Favourites" :"<i class=\"fa-solid fa-heart fav-icon\"></i> &nbsp; Add to Favourites</button>"}
+                 </div>
+
+                 <div style="display:none;">
+                      <span>${hero.name}</span>
+                      <span>${hero.description}</span>
+                      <span>${hero.comics.available}</span>
+                      <span>${hero.series.available}</span>
+                      <span>${hero.stories.available}</span>
+                      <span>${hero.thumbnail.path+'/portrait_uncanny.' + hero.thumbnail.extension}</span>
+                      <span>${hero.id}</span>
+                      <span>${hero.thumbnail.path+'/landscape_incredible.' + hero.thumbnail.extension}</span>
+                      <span>${hero.thumbnail.path+'/standard_fantastic.' + hero.thumbnail.extension}</span>
+                 </div>
+            </li> -->
+       </ul>
+      </div>
+      <!-- This is for the notifying when we add to favourit or removed from Favourait -->
+      <span data-visiblity="hide" class="fav-toast">Added to Favourites</span>
+     <span data-visiblity="hide" class="remove-toast">Removed from Favourites</span>
+    </main>
+
+    <!-- Script files -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

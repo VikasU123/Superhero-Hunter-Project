@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Hunter</title>
+    <link rel="icon" href="icon.png" type="gif">
+    <!-- Two CSS styls file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="favourit.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="snackbar"></div>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <a href="index.html">
+            <div class="nav-l">
+                <div id="title">
+                    <h1>Superhero<span>Hunter</span></h1>
+                </div>
+            </div>
+        </a>
+        <!-- Home and favourit buttons -->
+        <div class="nav-r">
+            <a href="index.html">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </a>
+            <a href="favourite.html">
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- List of favourit superhero characters -->
+    <div class="favourite-characters">
+        <div class="flex-row cards-container" id="container">
+             <!-- Structure of the data that is added using DOM manipulation -->
+
+             <!-- <div class="flex-col card">
+                  <img src="${character.squareImage}" alt="">
+                  <span class="name">${character.name}</span>
+                  <span class="id">Id : ${character.id}</span>
+                  <span class="comics">Comics : ${character.comics}</span>
+                  <span class="series">Series : ${character.series}</span>
+                  <span class="stories">Stories : ${character.stories}</span>
+                  <a class="character-info" href="./more-info.html">
+                       <button class="btn"><i class="fa-solid fa-circle-info"></i> &nbsp; More Info</button>
+                  </a>
+                  <div style="display:none;">
+                       <span>${character.id}</span>
+                       <span>${character.name}</span>
+                       <span>${character.comics}</span>
+                       <span>${character.series}</span>
+                       <span>${character.stories}</span>
+                       <span>${character.description}</span>
+                       <span>${character.landscapeImage}</span>
+                       <span>${character.portraitImage}</span>
+                       <span>${character.squareImage}</span>
+                  </div>
+                  <button class="btn remove-btn"><i class="fa-solid fa-heart-circle-minus"></i> &nbsp; Remove from Favourites</button>
+             </div> -->
+        </div>
+   </div>
+
+   <!-- Notefication for the removeing superhero from favourit list -->
+   <span data-visiblity="hide" class="remove-toast">Removed from Favourites</span>
+
+   <!-- script file link -->
+    <script src="favourite.js"></script>
+</body>
+
+</html>
